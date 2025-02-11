@@ -1,10 +1,10 @@
-module "iwt__git_ec2" {
+module "mea_git_ec2" {
   source               = "terraform-aws-modules/ec2-instance/aws"
   ami                  = var.ami
   instance_type        = var.instance_type
   subnet_id            = var.subnet_id
   availability_zone    = var.availability_zone
-  vpc_security_group_ids = [module.iwt_sg.security_group_id]
+  vpc_security_group_ids = [module.mea_git_sg.security_group_id]
   key_name             = var.key_name
 
   root_block_device = [
